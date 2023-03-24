@@ -4,9 +4,9 @@ const Register = () => {
     return (
         <div>
 
-            <div class="flex flex-col justify-center items-center min-h-screen py-4 px-8 font-WorkSans">
+            <div class="mx-auto  px-4 py-12 sm:px-6 lg:px-64 min-h-screen font-WorkSans ">
             <h2 class="text-xl font-bold  text-center">Register</h2>
-                <div class="w-full max-w-4xl bg-white rounded-lg shadow-xl p-8 flex my-4">
+                <div class="w-full  bg-white rounded-lg shadow-xl p-8 flex my-4">
                     <div class="w-1/3 md:block hidden my-auto pt-4 pb-16 ">
                         <ol class="list-decimal pl-4 text-gray-500 ">
                             <li class="mb-4 py-4">Registration</li>
