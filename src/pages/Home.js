@@ -24,7 +24,7 @@ function Home() {
                             </div>
                         </div>
                         <div className="w-1/2 sm:w-2/5 h-64 md:h-auto m-auto flex items-center overflow-hidden">
-                            <img className="md:absolute  pt-8 md:-ml-16" src={heroimage} alt="heroimage" style={{ width: "50%", height: "auto", minWidth: "220px" }} />
+                            <img className="md:absolute  pt-8 md:-ml-16" src={heroimage} alt="heroimage" style={{ width: "50%", height: "auto", minWidth: "170px" }} />
                         </div>
 
 
