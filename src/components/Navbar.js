@@ -1,9 +1,21 @@
 import { useState } from "react";
-import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll"; // import the animateScroll function
+
+import logo from "../assets/logo.png";
 
 export default function NavBar() {
     const [navbar, setNavbar] = useState(false);
+
+    const handleLinkClick = () => {
+        if (navbar) {
+            setNavbar(false);
+        }
+    };
+
+    const handleScrollToTop = () => {
+        scroll.scrollToTop({ smooth: true }); // add smooth scrolling effect
+    };
 
     return (
         <>
@@ -63,19 +75,29 @@ export default function NavBar() {
                         >
                             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 ">
                                 <li className="text-gray-600 hover:text-blue-600 font-WorkSans">
-                                    <Link to="/">Home</Link>
+                                    <Link to="/" onClick={handleLinkClick}>
+                                        Home
+                                    </Link>
                                 </li>
                                 <li className="text-gray-600 hover:text-blue-600 font-WorkSans">
-                                    <Link to="/faq">FAQ</Link>
+                                    <Link to="/faq" onClick={handleLinkClick}>
+                                        FAQ
+                                    </Link>
                                 </li>
                                 <li className="text-gray-600 hover:text-blue-600 font-WorkSans">
-                                    <Link to="/aboutus">About Us</Link>
+                                    <Link to="/aboutus" onClick={handleLinkClick}>
+                                        About Us
+                                    </Link>
                                 </li>
                                 <li className="bg-blue-600 text-white py-2 px-6 rounded-full hover:bg-blue-900 focus:outline-none font-Urbanist">
-                                    <Link to="/login">Log In</Link>
+                                    <Link to="/login" onClick={handleLinkClick}>
+                                        Log In
+                                    </Link>
                                 </li>
                                 <li className="bg-blue-600 text-white py-2 px-6 rounded-full hover:bg-blue-900 focus:outline-none font-Urbanist">
-                                    <Link to="/register">Register</Link>
+                                    <Link to="/register" onClick={handleLinkClick}>
+                                        Register
+                                    </Link>
                                 </li>
 
                             </ul>
